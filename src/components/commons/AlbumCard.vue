@@ -9,7 +9,10 @@
 
 <script>
 export default {
-    name: 'AlbumCard'
+    name: 'AlbumCard',
+    props: {
+        album: Object,
+    }
 }
 </script>
 
