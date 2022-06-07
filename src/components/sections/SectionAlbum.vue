@@ -1,9 +1,7 @@
 <template>
   <div class="album-grid">
       <div class="row">
-          <div class="col-3" >
-              <AlbumCard v-for="(album, index) in albums" :key="index"/>
-          </div>
+        <AlbumCard class="col-2" v-for="(album, index) in albums" :key="index" :album="album"/>
       </div>
   </div>
 </template>
@@ -25,8 +23,8 @@ export default {
     created() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
         .then((response) => {
-            this.albums = response.data;
-            console.log(response.data);
+            this.albums = response.data.response
+            console.log(response.data.response);
         })
         .catch((error) => {
             console.log(error);
@@ -36,5 +34,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 1.25rem;
+}
 
 </style>

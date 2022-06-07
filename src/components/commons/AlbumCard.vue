@@ -1,9 +1,9 @@
 <template>
   <div class="album p-4 d-flex-col">
-      <img src="https://www.emme2servizi.it/wp-content/uploads/2020/12/no-image.jpg" alt="">
-      <h3 class="title">Titolo</h3>
-      <div class="author">Autore</div>
-      <div class="year">1999</div>
+      <img :src="album.poster" alt="">
+      <h3 class="title">{{album.title}}</h3>
+      <div class="author">{{album.author}}</div>
+      <div class="year">{{album.year}}</div>
   </div>
 </template>
 
