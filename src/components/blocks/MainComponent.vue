@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="p-5">
     <div class="container">
         <section-album/>    
     </div>
@@ -15,5 +15,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+main {
+    background-color: #1E2D3B;
+}
 </style>

@@ -1,7 +1,9 @@
 <template>
   <div class="album-grid">
       <div class="row">
-          <div class="col-12 col-sm-6 col-lg">a</div>
+          <div class="col-12 col-sm-6 col-lg-3">
+              <AlbumCard/>
+          </div>
           <div class="col">b</div>
           <div class="col">c</div>
           <div class="col">d</div>
@@ -12,6 +14,7 @@
 
 <script>
 import axios from 'axios';
+import AlbumCard from '../commons/AlbumCard'
 
 export default {
     name: 'SectionAlbum',
@@ -19,6 +22,9 @@ export default {
         return {
             albums: [],
         };
+    },
+    components: {
+        AlbumCard
     },
     created() {
         axios.get('https://flynn.boolean.careers/exercises/api/array/music')
