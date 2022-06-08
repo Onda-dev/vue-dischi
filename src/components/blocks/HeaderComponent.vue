@@ -4,15 +4,12 @@
           <div class="logo col-1 p-3">
               <img src="/spotify-logo.png" alt="logo">
           </div>
-      <select-genre/>
       </div>
   </header>
 </template>
 
 <script>
-import SelectGenre from '../commons/SelectGenre.vue'
 export default {
-  components: { SelectGenre },
     name: 'HeaderComponent'
 }
 </script>
