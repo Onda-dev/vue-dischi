@@ -4,21 +4,15 @@
           <div class="logo col-1 p-3">
               <img src="/spotify-logo.png" alt="logo">
           </div>
-          <div class="filter-select">
-              <select name="genre" id="filter">
-                    <option value="genre" disabled selected>Genre</option>
-                    <option value="pop">Pop</option>
-                    <option value="jazz">Jazz</option>
-                    <option value="metal">Metal</option>
-                    <option value="rock">Rock</option>
-              </select>
-          </div>
+      <select-genre/>
       </div>
   </header>
 </template>
 
 <script>
+import SelectGenre from '../commons/SelectGenre.vue'
 export default {
+  components: { SelectGenre },
     name: 'HeaderComponent'
 }
 </script>
